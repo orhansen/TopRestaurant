@@ -1,0 +1,30 @@
+﻿@{
+
+    ViewData["Title"] = "Top Restaurant List";
+}
+@*The home page of the site that also displays the information from the restaurant model, the top 5 restaurants*@
+@model IEnumerable<string>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Top Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <header class="text-center">
+        <h1>Top Restaurants</h1>
+    </header>
+    
+    <div class="text-center"><img src="~/img/restaurant-449952_1280.jpg" width="500" /></div>
+
+    <ul class="text-center">
+        @foreach (string i in Model)
+        {
+            <li class="list-unstyled">@Html.Raw(i)</li>
+        }
+    </ul>
+</body>
+</html>

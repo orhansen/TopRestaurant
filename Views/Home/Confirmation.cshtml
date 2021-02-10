@@ -1,0 +1,12 @@
+﻿@*
+    This page serves as a confirmation when a user submits a restaurant. And can redirect them to the list as well
+*@
+@{
+    ViewBag.Title = "Restaurant Submitted";
+}
+@model TopRestaurant.Models.RestaurantResponse
+
+<div class="text-center">
+    <p class="text-success"> @Model.RestaurantName has been submitted.</p>
+    Click <a asp-action="UserSubmissions">here</a> to view the user submitted list.
+</div>

@@ -1,0 +1,19 @@
+﻿@*
+    This view shows the user inputted recommendations in a list format.
+*@
+@{
+    ViewBag.Title = "Restaurant Submissions";
+}
+@model IEnumerable<TopRestaurant.Models.RestaurantResponse>
+
+<div class="text-center">
+    <h2>Here is the list of User submitted restaurants!</h2>
+    <ul class="list-unstyled">
+        @foreach(TopRestaurant.Models.RestaurantResponse x in Model)
+        {
+            <li>@x.Name submitted @x.RestaurantName with favorite dish @x.FavDish and restaurant phone number: @x.RestaurantPhone</li>
+        }
+    </ul>
+    <br />
+    Click <a asp-action="RestaurantInsert">here</a> to add another restaurant!
+</div>

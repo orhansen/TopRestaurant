@@ -1,0 +1,27 @@
+﻿@*Shared alayout across all pages of the application*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top Restaurants</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg-primary text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <menu class="text-center">
+        <ul class="list-unstyled">
+            <li><a asp-controller="Home" asp-action="Index">Home/Top 5</a></li>
+            <li><a asp-controller="Home" asp-action="RestaurantInsert">Submit Restaurant</a></li>
+            <li><a asp-controller="Home" asp-action="UserSubmissions">User Submitted Restaurants</a></li>
+        </ul>
+    </menu>
+
+    @RenderBody()
+
+    <footer class="text-center">Hansen Copyright 2021</footer>
+</body>
+</html>
